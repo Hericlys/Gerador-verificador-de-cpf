@@ -1,3 +1,10 @@
+from os import system
+
+
+def limpar():
+    system('cls')
+
+
 def valida_escolha(lista_de_opções=[1,2,3]):
     escolha_usuario = None
     while True:
@@ -9,8 +16,18 @@ def valida_escolha(lista_de_opções=[1,2,3]):
         if not escolha_usuario in lista_de_opções:
             print("\033[1;31mOpção invalida! Escolha uma opção dentro das disponiveis...\033[0;0m")
             continue
-        print(f'Você escolheu a opção {escolha_usuario}')
-        return escolha_usuario
+        criar_linha()
+        return int(escolha_usuario)
+
+
+def valida_int(msg='digite um numero:'):
+    while True:
+        try:
+            r = int(input(msg))
+        except ValueError:
+            print("digite apenas numeros inteiros!")
+            continue
+        return r
 
 
 def criar_linha(tamanho=42, formato='-'):
@@ -37,6 +54,7 @@ def criar_menu(titulo="Titulo Padrão", lista_de_opções=['opc01', 'opc02', 'op
         opc_disponiveis.append(num)
     criar_linha(tamanho, formato)
     resposta = valida_escolha(opc_disponiveis)
+    print(f'\033[1;32mVocê escolheu a opção " {resposta} " - {lista_de_opções[int(resposta)]}\033[0;0m')
     return resposta
 
 
