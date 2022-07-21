@@ -2,6 +2,13 @@ from random import randint
 
 
 def valida_cpf(cpf):
+    """
+    verifica se um cpf é valido.
+    O cpf pode conter ou não pontuação e espaços em branco.
+
+    :param cpf: str - cpf
+    :return: bool - True se valido e False se invalido
+    """
     # removendo a pontuação.
     cpf = cpf.replace('.', '').replace('-', '').replace(' ', '')
 
@@ -34,6 +41,11 @@ def valida_cpf(cpf):
 
 
 def criar_cpf():
+    """
+    Cria um numero de cpf aleatorio valido
+
+    :return: str - numero de CPF valido
+    """
     # Criando numeros aleatorio para o cpf
     cpf = ''
     for c in range(0, 9):
@@ -54,8 +66,3 @@ def criar_cpf():
             digito = 0
         cpf += str(digito)
     return cpf
-
-
-if __name__ == "__main__":
-    r = valida_cpf()
-    print(r)
