@@ -11,6 +11,6 @@
 <h2>#ATENÇÂO</h2>
 <p>
 o sistema de geração de CPF tem como intenção ajudar estudantes, programadores, analistas e testadores a gerar CPF válidos. Normalmente necessários parar testar seus softwares em desenvolvimento.
-A má utilização dos dados aqui gerados é de total responsabilidade do usuário.
+A má utilização dos dados gerados é de total responsabilidade do usuário.
 Os números são gerados de forma aleatória, respeitando as regras de criação do documento. 
 </p>
